@@ -1,0 +1,120 @@
+<svg viewBox="0 0 1080 1300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#111C33"/>
+    </linearGradient>
+
+    <pattern id="dotGrid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#5FCBEE" opacity="0.10"/>
+    </pattern>
+
+    <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#3FB6E8" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#3FB6E8" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="38"/>
+    </filter>
+
+    <style>
+      .display { font-family: 'Segoe UI Semibold', 'Segoe UI', 'DejaVu Sans', sans-serif; font-weight: 800; }
+      .body    { font-family: 'Segoe UI', 'DejaVu Sans', sans-serif; }
+      .mono    { font-family: 'Cascadia Code', 'Consolas', 'DejaVu Sans Mono', monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1080" height="1300" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="1080" height="1300" fill="url(#dotGrid)"/>
+
+  <!-- Ambient glow behind the terminal -->
+  <ellipse cx="540" cy="470" rx="420" ry="260" fill="url(#glow)" filter="url(#softBlur)"/>
+
+  <!-- Logo mark + eyebrow -->
+  <rect x="80" y="68" width="40" height="40" rx="9" fill="#0D1830" stroke="#3A5586" stroke-width="1.5"/>
+  <text x="100" y="95" text-anchor="middle" class="mono" font-size="18" font-weight="700" fill="#5FCBEE">&gt;_</text>
+  <text x="134" y="94" class="mono" font-size="19" letter-spacing="2" fill="#5FCBEE">PERSONAL PROJECT &#183; OPEN SOURCE</text>
+
+  <!-- Title -->
+  <text x="80" y="178" class="display" font-size="58" fill="#F3F0E8">Personal Password Vault</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="224" class="body" font-size="25" fill="#8C9AB5">A local, offline password vault for Windows. Nothing leaves your PC.</text>
+
+  <!-- Terminal window -->
+  <g>
+    <rect x="80" y="270" width="920" height="400" rx="14" fill="#122042" stroke="#24375C" stroke-width="1.5"/>
+    <rect x="80" y="270" width="920" height="42" rx="14" fill="#0D1830"/>
+    <rect x="80" y="298" width="920" height="14" fill="#0D1830"/>
+    <circle cx="108" cy="291" r="6" fill="#3A5586"/>
+    <circle cx="128" cy="291" r="6" fill="#3A5586"/>
+    <circle cx="148" cy="291" r="6" fill="#3A5586"/>
+    <text x="540" y="296" text-anchor="middle" class="mono" font-size="16" fill="#7E93B8">vault.ps1 &#8212; Windows PowerShell</text>
+
+    <g class="mono" font-size="22" fill="#D7E2F2">
+      <text x="108" y="352" fill="#5FCBEE">================================</text>
+      <text x="108" y="381" fill="#F3F0E8"> Personal Password Vault</text>
+      <text x="108" y="410" fill="#5FCBEE">================================</text>
+      <text x="108" y="439">1. View saved entries</text>
+      <text x="108" y="468">2. Add new entry</text>
+      <text x="108" y="497">3. Edit existing entry</text>
+      <text x="108" y="526">4. Rename entry title</text>
+      <text x="108" y="555">5. Delete entry</text>
+      <text x="108" y="584">6. Exit</text>
+      <text x="108" y="642">Choose option: </text>
+    </g>
+    <rect x="306" y="623" width="13" height="24" fill="#F0B64C">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Section label -->
+  <text x="80" y="718" class="mono" font-size="20" letter-spacing="2" fill="#5FCBEE">WHAT EACH PART ACTUALLY DOES</text>
+
+  <!-- Feature rows -->
+  <g class="body" font-size="24" fill="#F3F0E8">
+    <!-- Row 1 -->
+    <rect x="80" y="738" width="44" height="44" rx="10" fill="#0D1830" stroke="#F0B64C" stroke-width="1.5"/>
+    <text x="102" y="767" text-anchor="middle" class="mono" font-size="20" font-weight="700" fill="#F0B64C">1</text>
+    <text x="146" y="767">Copy a password &#8212; clipboard clears itself in 15s.</text>
+
+    <!-- Row 2 -->
+    <rect x="80" y="814" width="44" height="44" rx="10" fill="#0D1830" stroke="#F0B64C" stroke-width="1.5"/>
+    <text x="102" y="843" text-anchor="middle" class="mono" font-size="20" font-weight="700" fill="#F0B64C">2</text>
+    <text x="146" y="843">Type a password and it stays hidden, never shown.</text>
+
+    <!-- Row 3 -->
+    <rect x="80" y="890" width="44" height="44" rx="10" fill="#0D1830" stroke="#F0B64C" stroke-width="1.5"/>
+    <text x="102" y="919" text-anchor="middle" class="mono" font-size="20" font-weight="700" fill="#F0B64C">5</text>
+    <text x="146" y="919">Deleting asks you to type DELETE first. No accidents.</text>
+
+    <!-- Row 4 -->
+    <rect x="80" y="966" width="44" height="44" rx="10" fill="#0D1830" stroke="#F0B64C" stroke-width="1.5"/>
+    <text x="102" y="995" text-anchor="middle" class="mono" font-size="20" font-weight="700" fill="#F0B64C">&#8212;</text>
+    <text x="146" y="995">Nothing leaves your PC. No cloud, no servers, no sync.</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="80" y1="1045" x2="1000" y2="1045" stroke="#24375C" stroke-width="1.5"/>
+
+  <!-- Tech pills -->
+  <g class="mono" font-size="16" letter-spacing="1.5" fill="#D7E2F2">
+    <rect x="80" y="1068" width="158" height="44" rx="22" fill="#0D1830" stroke="#3A5586" stroke-width="1.5"/>
+    <text x="159" y="1096" text-anchor="middle">POWERSHELL</text>
+
+    <rect x="254" y="1068" width="128" height="44" rx="22" fill="#0D1830" stroke="#3A5586" stroke-width="1.5"/>
+    <text x="318" y="1096" text-anchor="middle">WINDOWS</text>
+
+    <rect x="398" y="1068" width="158" height="44" rx="22" fill="#0D1830" stroke="#3A5586" stroke-width="1.5"/>
+    <text x="477" y="1096" text-anchor="middle">LOCAL-ONLY</text>
+
+    <rect x="572" y="1068" width="176" height="44" rx="22" fill="#0D1830" stroke="#5FCBEE" stroke-width="1.5"/>
+    <text x="660" y="1096" text-anchor="middle" fill="#5FCBEE">OPEN SOURCE</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="80" y="1170" class="body" font-size="26" fill="#F3F0E8">A small personal project to keep passwords simple, local, and yours.</text>
+  <text x="80" y="1208" class="mono" font-size="18" letter-spacing="2" fill="#5FCBEE">FULL PROJECT &#8212; LINK IN THIS POST</text>
+</svg>
