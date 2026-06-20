@@ -8,6 +8,8 @@
 
 A lightweight, high-security, local CLI-based password manager built natively using PowerShell and the Windows .NET Cryptography ecosystem. It features **zero external dependencies**, a **dual-layer cryptographic architecture**, and **automatic operating-system-level folder hardening**.
 
+![Demo Animation](./vault_infographic.svg)
+
 ---
 
 ## 🏗️ Architecture & Security Model
