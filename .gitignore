@@ -1,0 +1,3 @@
+# Ignore local secure data binaries
+data/
+*.enc
